@@ -19,7 +19,7 @@ import javax.sql.DataSource;
  * @date 2018/1/23
  */
 @Configuration
-@MapperScan(basePackages = {"com.invo.*.entity"})
+@MapperScan(basePackages = {"com.invo.*.mapper"})
 public class MybatisPlusConfiguration {
 
     /**
