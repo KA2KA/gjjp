@@ -14,9 +14,7 @@ import java.io.Serializable;
  * <p>
  * 用户角色表：用户表和角色表的中间表
  * </p>
- *
  * @author wuwanggao@163.com123
- * @since 2018-01-23
  */
 @TableName("sys_group")
 public class SysGroup extends Model<SysGroup> {

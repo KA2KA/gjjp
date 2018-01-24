@@ -3,18 +3,20 @@ package com.invo.system.entity;
 import java.io.Serializable;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+
 import java.io.Serializable;
 
 /**
  * <p>
  * 角色表
  * </p>
- *
  * @author wuwanggao@163.com123
  * @since 2018-01-23
  */
@@ -184,18 +186,18 @@ public class SysRole extends Model<SysRole> {
     @Override
     public String toString() {
         return "SysRole{" +
-        ", id=" + id +
-        ", rolename=" + rolename +
-        ", description=" + description +
-        ", parentId=" + parentId +
-        ", remark=" + remark +
-        ", state=" + state +
-        ", createBy=" + createBy +
-        ", updateBy=" + updateBy +
-        ", createDate=" + createDate +
-        ", updateDate=" + updateDate +
-        ", delFlag=" + delFlag +
-        ", version=" + version +
-        "}";
+                ", id=" + id +
+                ", rolename=" + rolename +
+                ", description=" + description +
+                ", parentId=" + parentId +
+                ", remark=" + remark +
+                ", state=" + state +
+                ", createBy=" + createBy +
+                ", updateBy=" + updateBy +
+                ", createDate=" + createDate +
+                ", updateDate=" + updateDate +
+                ", delFlag=" + delFlag +
+                ", version=" + version +
+                "}";
     }
 }

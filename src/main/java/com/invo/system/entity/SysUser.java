@@ -3,11 +3,14 @@ package com.invo.system.entity;
 import java.io.Serializable;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+
 import java.io.Serializable;
 
 /**
@@ -281,26 +284,26 @@ public class SysUser extends Model<SysUser> {
     @Override
     public String toString() {
         return "SysUser{" +
-        ", id=" + id +
-        ", username=" + username +
-        ", usertype=" + usertype +
-        ", password=" + password +
-        ", nickname=" + nickname +
-        ", sex=" + sex +
-        ", phone=" + phone +
-        ", email=" + email +
-        ", alias=" + alias +
-        ", loginAddress=" + loginAddress +
-        ", loginDate=" + loginDate +
-        ", ip=" + ip +
-        ", state=" + state +
-        ", remark=" + remark +
-        ", createBy=" + createBy +
-        ", updateBy=" + updateBy +
-        ", createDate=" + createDate +
-        ", updateDate=" + updateDate +
-        ", delFlag=" + delFlag +
-        ", version=" + version +
-        "}";
+                ", id=" + id +
+                ", username=" + username +
+                ", usertype=" + usertype +
+                ", password=" + password +
+                ", nickname=" + nickname +
+                ", sex=" + sex +
+                ", phone=" + phone +
+                ", email=" + email +
+                ", alias=" + alias +
+                ", loginAddress=" + loginAddress +
+                ", loginDate=" + loginDate +
+                ", ip=" + ip +
+                ", state=" + state +
+                ", remark=" + remark +
+                ", createBy=" + createBy +
+                ", updateBy=" + updateBy +
+                ", createDate=" + createDate +
+                ", updateDate=" + updateDate +
+                ", delFlag=" + delFlag +
+                ", version=" + version +
+                "}";
     }
 }
