@@ -22,9 +22,9 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <db.url>jdbc:mysql://sh-cdb-ackq1gr4.sql.tencentcdb.com:63563/gjjp</db.url>
+                <db.url>jdbc:mysql://localhost:63563/gjjp</db.url>
                 <db.username>root</db.username>
-                <db.password>kaka@520</db.password>
+                <db.password></db.password>
             </properties>
         </profile>
     </profiles>
