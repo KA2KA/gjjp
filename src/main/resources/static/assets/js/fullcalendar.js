@@ -254,7 +254,7 @@ function isForcedAtomicOption(name) {
 
 ;;
 
-//var langOptionHash = {}; // initialized in defaults.js
+//var langOptionHash = {}; // initialized in defaults.vuejs
 fc.langs = langOptionHash; // expose
 
 
@@ -3137,7 +3137,7 @@ setLocalValues = allowValueOptimization ? function(mom, a) {
 
 // call this if you want Moment's original format method to be used
 function oldMomentFormat(mom, formatStr) {
-	return oldMomentProto.format.call(mom, formatStr); // oldMomentProto defined in moment-ext.js
+	return oldMomentProto.format.call(mom, formatStr); // oldMomentProto defined in moment-ext.vuejs
 }
 
 
@@ -4475,7 +4475,7 @@ $.extend(Grid.prototype, {
 			}
 		});
 
-		this.bindSegHandlers(); // attach event-element-related handlers. in Grid.events.js
+		this.bindSegHandlers(); // attach event-element-related handlers. in Grid.events.vuejs
 	},
 
 
@@ -5539,7 +5539,7 @@ DayGrid.prototype = createObject(Grid.prototype); // declare the super-class
 $.extend(DayGrid.prototype, {
 
 	numbersVisible: false, // should render a row for day/week numbers? manually set by the view
-	cellDuration: moment.duration({ days: 1 }), // required for Grid.event.js. Each cell is always a single day
+	cellDuration: moment.duration({ days: 1 }), // required for Grid.event.vuejs. Each cell is always a single day
 	bottomCoordPadding: 0, // hack for extending the hit area for the last row of the coordinate grid
 
 	rowEls: null, // set of fake row elements
@@ -6627,7 +6627,7 @@ $.extend(TimeGrid.prototype, {
 
 		this.slotDuration = slotDuration;
 		this.snapDuration = snapDuration;
-		this.cellDuration = snapDuration; // important to assign this for Grid.events.js
+		this.cellDuration = snapDuration; // important to assign this for Grid.events.vuejs
 
 		this.minTime = moment.duration(view.opt('minTime'));
 		this.maxTime = moment.duration(view.opt('maxTime'));

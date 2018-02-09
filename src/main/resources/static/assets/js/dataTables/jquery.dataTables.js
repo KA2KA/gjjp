@@ -6,7 +6,7 @@
  * @summary     DataTables
  * @description Paginate, search and order HTML tables
  * @version     1.10.4
- * @file        jquery.dataTables.js
+ * @file        jquery.dataTables.vuejs
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2008-2014 SpryMedia Ltd.
@@ -11673,7 +11673,7 @@
 	
 	
 	/*
-	 * Developer note - See note in model.defaults.js about the use of Hungarian
+	 * Developer note - See note in model.defaults.vuejs about the use of Hungarian
 	 * notation and camel case.
 	 */
 	

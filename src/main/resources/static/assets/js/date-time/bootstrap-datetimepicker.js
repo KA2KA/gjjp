@@ -40,7 +40,7 @@ THE SOFTWARE.
             throw new Error('bootstrap-datetimepicker requires jQuery to be loaded first');
         }
         if (!moment) {
-            throw new Error('bootstrap-datetimepicker requires moment.js to be loaded first');
+            throw new Error('bootstrap-datetimepicker requires moment.vuejs to be loaded first');
         }
         factory(root.jQuery, moment);
     }

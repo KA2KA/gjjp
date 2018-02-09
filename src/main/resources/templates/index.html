@@ -12,8 +12,12 @@
     <script type="text/javascript" th:src="@{jquery-easyui-1.5.4/jquery.easyui.min.js}"></script>
 </head>
 <body class="easyui-layout">
-    <div th:include="/common/bar :: bar"></div>
-    <div th:include="/common/menu ::menu"></div>
-    <div th:include="/common/center ::center"></div>
+<!-- 通过 tag名称 引用 -->
+<header th:replace="common/top_header :: header"></header>
+
+<div th:insert="common/footer :: copy">aaa</div>
+
+<!-- 通过 id 引用 -->
+<div th:replace="~{common/footer :: #copy-section}"></div>
 </body>
 </html>

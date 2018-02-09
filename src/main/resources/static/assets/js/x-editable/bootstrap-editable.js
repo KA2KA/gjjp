@@ -440,7 +440,7 @@ Editableform is linked with one of input types, e.g. 'text', 'select' etc.
             if(params.value === 'abc') {
                 return d.reject('error message'); //returning error via deferred object
             } else {
-                //async saving data in js model
+                //async saving data in vuejs model
                 someModel.asyncSaveMethod({
                    ..., 
                    success: function(){
@@ -891,7 +891,7 @@ Editableform is linked with one of input types, e.g. 'text', 'select' etc.
 /**
 Attaches stand-alone container with editable-form to HTML element. Element is used only for positioning, value is not stored anywhere.<br>
 This method applied internally in <code>$().editable()</code>. You should subscribe on it's events (save / cancel) to get profit of it.<br>
-Final realization can be different: bootstrap-popover, jqueryui-tooltip, poshytip, inline-div. It depends on which js file you include.<br>
+Final realization can be different: bootstrap-popover, jqueryui-tooltip, poshytip, inline-div. It depends on which vuejs file you include.<br>
 Applied as jQuery method.
 
 @class editableContainer
@@ -997,7 +997,7 @@ Applied as jQuery method.
             this.formOptions = {};
             
             if(!$.fn[this.containerName]) {
-                throw new Error(this.containerName + ' not found. Have you included corresponding js file?');   
+                throw new Error(this.containerName + ' not found. Have you included corresponding vuejs file?');   
             }
             
             //keys defined in container defaults go to container, others go to form
@@ -1476,7 +1476,7 @@ Makes editable any HTML element on the page. Applied as jQuery method.
 
     var Editable = function (element, options) {
         this.$element = $(element);
-        //data-* has more priority over js options: because dynamically created elements may change data-* 
+        //data-* has more priority over vuejs options: because dynamically created elements may change data-* 
         this.options = $.extend({}, $.fn.editable.defaults, options, $.fn.editableutils.getConfigData(this.$element));  
         if(this.options.selector) {
             this.initLive();
@@ -2546,7 +2546,7 @@ To create your own input you can inherit from this class.
 }(window.jQuery));
 
 /**
-List - abstract class for inputs that have source option loaded from js array or via ajax
+List - abstract class for inputs that have source option loaded from vuejs array or via ajax
 
 @class list
 @extends abstractinput
@@ -3608,7 +3608,7 @@ Please see [original select2 docs](http://ivaynberg.github.com/select2) for deta
 You should manually download and include select2 distributive:  
 
     <link href="select2/select2.css" rel="stylesheet" type="text/css"></link>  
-    <script src="select2/select2.js"></script>  
+    <script src="select2/select2.vuejs"></script>  
     
 To make it **bootstrap-styled** you can use css from [here](https://github.com/t0m/select2-bootstrap-css): 
 
@@ -4440,7 +4440,7 @@ $(function(){
 Combodate input - dropdown date and time picker.    
 Based on [combodate](http://vitalets.github.com/combodate) plugin (included). To use it you should manually include [momentjs](http://momentjs.com).
 
-    <script src="js/moment.min.js"></script>
+    <script src="vuejs/moment.min.vuejs"></script>
    
 Allows to input:
 
@@ -4701,7 +4701,7 @@ Editableform based on Twitter Bootstrap 3
 /**
 * Editable Popover3 (for Bootstrap 3) 
 * ---------------------
-* requires bootstrap-popover.js
+* requires bootstrap-popover.vuejs
 */
 (function ($) {
     "use strict";
@@ -4929,12 +4929,12 @@ Editableform based on Twitter Bootstrap 3
 /**
 Bootstrap-datetimepicker.  
 Based on [smalot bootstrap-datetimepicker plugin](https://github.com/smalot/bootstrap-datetimepicker). 
-Before usage you should manually include dependent js and css:
+Before usage you should manually include dependent vuejs and css:
 
     <link href="css/datetimepicker.css" rel="stylesheet" type="text/css"></link> 
-    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="vuejs/bootstrap-datetimepicker.vuejs"></script>
 
-For **i18n** you should include js file from here: https://github.com/smalot/bootstrap-datetimepicker/tree/master/js/locales
+For **i18n** you should include vuejs file from here: https://github.com/smalot/bootstrap-datetimepicker/tree/master/js/locales
 and set `language` option.  
 
 @class datetime

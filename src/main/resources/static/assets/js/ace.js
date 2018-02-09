@@ -829,7 +829,7 @@ jQuery(function($) {
 				var resolved = 0;
 				for(var i = 0; i < scripts.length; i++) if(scripts[i]) {
 					(function() {
-						var script_name = "js-"+scripts[i].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
+						var script_name = "vuejs-"+scripts[i].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
 						if( ajax_loaded_scripts[script_name] !== true )	deferred_count++;
 					})()
 				}
@@ -849,7 +849,7 @@ jQuery(function($) {
 						return nextScript(index);
 					}
 				
-					var script_name = "js-"+scripts[index].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
+					var script_name = "vuejs-"+scripts[index].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
 					//only load scripts that are not loaded yet!
 					if( ajax_loaded_scripts[script_name] !== true ) {
 						$.getScript(scripts[index])
@@ -941,7 +941,7 @@ jQuery(function($) {
 
 ;/**
  <b>Custom drag event for touch devices</b> used in scrollbars.
- For better touch event handling and extra options a more advanced solution such as <u>Hammer.js</u> is recommended.
+ For better touch event handling and extra options a more advanced solution such as <u>Hammer.vuejs</u> is recommended.
 */
 
 //based on but not dependent on jQuery mobile
@@ -1132,7 +1132,7 @@ jQuery(function($) {
 			
 			try {
 				//toggle_btn can also be a param to indicate saving to cookie or not?! if toggle_btn === false, it won't be saved
-				ace.settings.sidebar_collapsed(sidebar, this.minimized, !(toggle_btn === false || save === false));//@ ace-extra.js
+				ace.settings.sidebar_collapsed(sidebar, this.minimized, !(toggle_btn === false || save === false));//@ ace-extra.vuejs
 			} catch(e) {
 				if(this.minimized)
 					this.$sidebar.addClass('menu-min');
@@ -2884,7 +2884,7 @@ jQuery(function($) {
  })
 
  $('#ace-settings-navbar').on('click', function(){
-	ace.settings.navbar_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.navbar_fixed(null, this.checked);//@ ace-extra.vuejs
 	//$(window).triggerHandler('resize.navbar');
 
 	//force redraw?
@@ -2892,19 +2892,19 @@ jQuery(function($) {
  }).each(function(){this.checked = ace.settings.is('navbar', 'fixed')})
 
  $('#ace-settings-sidebar').on('click', function(){
-	ace.settings.sidebar_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.sidebar_fixed(null, this.checked);//@ ace-extra.vuejs
 
 	//if(ace.vars['webkit']) ace.helper.redraw(document.body);
  }).each(function(){this.checked = ace.settings.is('sidebar', 'fixed')})
 
  $('#ace-settings-breadcrumbs').on('click', function(){
-	ace.settings.breadcrumbs_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.breadcrumbs_fixed(null, this.checked);//@ ace-extra.vuejs
 
 	//if(ace.vars['webkit']) ace.helper.redraw(document.body);
  }).each(function(){this.checked = ace.settings.is('breadcrumbs', 'fixed')})
 
  $('#ace-settings-add-container').on('click', function(){
-	ace.settings.main_container_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.main_container_fixed(null, this.checked);//@ ace-extra.vuejs
 
 	//if(ace.vars['webkit']) ace.helper.redraw(document.body);
  }).each(function(){this.checked = ace.settings.is('main-container', 'fixed')})

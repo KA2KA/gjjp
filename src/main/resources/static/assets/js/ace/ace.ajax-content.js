@@ -289,7 +289,7 @@
 				var resolved = 0;
 				for(var i = 0; i < scripts.length; i++) if(scripts[i]) {
 					(function() {
-						var script_name = "js-"+scripts[i].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
+						var script_name = "vuejs-"+scripts[i].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
 						if( ajax_loaded_scripts[script_name] !== true )	deferred_count++;
 					})()
 				}
@@ -309,7 +309,7 @@
 						return nextScript(index);
 					}
 				
-					var script_name = "js-"+scripts[index].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
+					var script_name = "vuejs-"+scripts[index].replace(/[^\w\d\-]/g, '-').replace(/\-\-/g, '-');
 					//only load scripts that are not loaded yet!
 					if( ajax_loaded_scripts[script_name] !== true ) {
 						$.getScript(scripts[index])

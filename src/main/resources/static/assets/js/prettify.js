@@ -28,7 +28,7 @@
  * <p>
  * Usage: <ol>
  * <li> include this source file in an html page via
- *   {@code <script type="text/javascript" src="/path/to/prettify.js"></script>}
+ *   {@code <script type="text/javascript" src="/path/to/prettify.vuejs"></script>}
  * <li> define style rules.  See the example page for examples.
  * <li> mark the {@code <pre>} and {@code <code>} tags in your source with
  *    {@code class=prettyprint.}
@@ -41,7 +41,7 @@
  * another class to the {@code <pre>} or {@code <code>} element to specify the
  * language, as in {@code <pre class="prettyprint lang-java">}.  Any class that
  * starts with "lang-" followed by a file extension, specifies the file type.
- * See the "lang-*.js" files in this directory for code that implements
+ * See the "lang-*.vuejs" files in this directory for code that implements
  * per-language file handlers.
  * <p>
  * Change log:<br>
@@ -633,11 +633,11 @@ var prettyPrint;
     * The text before and after group 1 will be restyled using this decorator
     * so decorators should take care that this doesn't result in infinite
     * recursion.  For example, the HTML lexer rule for SCRIPT elements looks
-    * something like ['lang-js', /<[s]cript>(.+?)<\/script>/].  This may match
+    * something like ['lang-vuejs', /<[s]cript>(.+?)<\/script>/].  This may match
     * '<script>foo()<\/script>', which would cause the current decorator to
     * be called with '<script>' which would not match the same rule since
     * group 1 must not be empty, so it would be instead styled as PR_TAG by
-    * the generic tag rule.  The handler registered for the 'js' extension would
+    * the generic tag rule.  The handler registered for the 'vuejs' extension would
     * then be called with 'foo()', and finally, the current decorator would
     * be called with '<\/script>' which would not match the original rule and
     * so the generic tag rule would identify it as a tag.
@@ -1286,7 +1286,7 @@ var prettyPrint;
            [PR_PUNCTUATION, /^(?:<[%?]|[%?]>)/],
            ['lang-',        /^<xmp\b[^>]*>([\s\S]+?)<\/xmp\b[^>]*>/i],
            // Unescaped content in javascript.  (Or possibly vbscript).
-           ['lang-js',      /^<script\b[^>]*>([\s\S]*?)(<\/script\b[^>]*>)/i],
+           ['lang-vuejs',      /^<script\b[^>]*>([\s\S]*?)(<\/script\b[^>]*>)/i],
            // Contains unescaped stylesheet content
            ['lang-css',     /^<style\b[^>]*>([\s\S]*?)(<\/style\b[^>]*>)/i],
            ['lang-in.tag',  /^(<\/?[a-z][^<>]*>)/i]
@@ -1303,9 +1303,9 @@ var prettyPrint;
            [PR_ATTRIB_NAME,  /^(?!style[\s=]|on)[a-z](?:[\w:-]*\w)?/i],
            ['lang-uq.val',   /^=\s*([^>\'\"\s]*(?:[^>\'\"\s\/]|\/(?=\s)))/],
            [PR_PUNCTUATION,  /^[=<>\/]+/],
-           ['lang-js',       /^on\w+\s*=\s*\"([^\"]+)\"/i],
-           ['lang-js',       /^on\w+\s*=\s*\'([^\']+)\'/i],
-           ['lang-js',       /^on\w+\s*=\s*([^\"\'>\s]+)/i],
+           ['lang-vuejs',       /^on\w+\s*=\s*\"([^\"]+)\"/i],
+           ['lang-vuejs',       /^on\w+\s*=\s*\'([^\']+)\'/i],
+           ['lang-vuejs',       /^on\w+\s*=\s*([^\"\'>\s]+)/i],
            ['lang-css',      /^style\s*=\s*\"([^\"]+)\"/i],
            ['lang-css',      /^style\s*=\s*\'([^\']+)\'/i],
            ['lang-css',      /^style\s*=\s*([^\"\'>\s]+)/i]

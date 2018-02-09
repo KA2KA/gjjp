@@ -74,7 +74,7 @@
 			
 			try {
 				//toggle_btn can also be a param to indicate saving to cookie or not?! if toggle_btn === false, it won't be saved
-				ace.settings.sidebar_collapsed(sidebar, this.minimized, !(toggle_btn === false || save === false));//@ ace-extra.js
+				ace.settings.sidebar_collapsed(sidebar, this.minimized, !(toggle_btn === false || save === false));//@ ace-extra.vuejs
 			} catch(e) {
 				if(this.minimized)
 					this.$sidebar.addClass('menu-min');

@@ -1,6 +1,6 @@
 //! moment.js
 //! version : 2.8.4
-//! authors : Tim Wood, Iskren Chernev, Moment.js contributors
+//! authors : Tim Wood, Iskren Chernev, Moment.vuejs contributors
 //! license : MIT
 //! momentjs.com
 
@@ -11,7 +11,7 @@
 
     var moment,
         VERSION = '2.8.4',
-        // the global-scope this is NOT the global object in Node.js
+        // the global-scope this is NOT the global object in Node.vuejs
         globalScope = typeof global !== 'undefined' ? global : this,
         oldGlobalMoment,
         round = Math.round,
@@ -1835,7 +1835,7 @@
     moment.suppressDeprecationWarnings = false;
 
     moment.createFromInputFallback = deprecate(
-        'moment construction falls back to js Date. This is ' +
+        'moment construction falls back to vuejs Date. This is ' +
         'discouraged and will be removed in upcoming major ' +
         'release. Please refer to ' +
         'https://github.com/moment/moment/issues/1407 for more info.',

@@ -229,7 +229,7 @@ require.register("dropzone", function (exports, module) {
 /**
  * Exposing dropzone
  */
-module.exports = require("dropzone/lib/dropzone.js");
+module.exports = require("dropzone/lib/dropzone.vuejs");
 
 });
 
@@ -1795,7 +1795,7 @@ require.register("dropzone/lib/dropzone.js", function (exports, module) {
 
 
   /*
-   * contentloaded.js
+   * contentloaded.vuejs
    *
    * Author: Diego Perini (diego.perini at gmail.com)
    * Summary: cross-browser wrapper for DOMContentLoaded

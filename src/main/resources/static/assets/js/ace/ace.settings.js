@@ -11,7 +11,7 @@
  })
 
  $('#ace-settings-navbar').on('click', function(){
-	ace.settings.navbar_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.navbar_fixed(null, this.checked);//@ ace-extra.vuejs
 	//$(window).triggerHandler('resize.navbar');
 
 	//force redraw?
@@ -19,19 +19,19 @@
  }).each(function(){this.checked = ace.settings.is('navbar', 'fixed')})
 
  $('#ace-settings-sidebar').on('click', function(){
-	ace.settings.sidebar_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.sidebar_fixed(null, this.checked);//@ ace-extra.vuejs
 
 	//if(ace.vars['webkit']) ace.helper.redraw(document.body);
  }).each(function(){this.checked = ace.settings.is('sidebar', 'fixed')})
 
  $('#ace-settings-breadcrumbs').on('click', function(){
-	ace.settings.breadcrumbs_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.breadcrumbs_fixed(null, this.checked);//@ ace-extra.vuejs
 
 	//if(ace.vars['webkit']) ace.helper.redraw(document.body);
  }).each(function(){this.checked = ace.settings.is('breadcrumbs', 'fixed')})
 
  $('#ace-settings-add-container').on('click', function(){
-	ace.settings.main_container_fixed(null, this.checked);//@ ace-extra.js
+	ace.settings.main_container_fixed(null, this.checked);//@ ace-extra.vuejs
 
 	//if(ace.vars['webkit']) ace.helper.redraw(document.body);
  }).each(function(){this.checked = ace.settings.is('main-container', 'fixed')})
